@@ -32,9 +32,8 @@ private: // methods
 	void OnApply_Implementation(UAnimSequence* TargetSequence) override;
 
 public: // members
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Settings")
-	UAnimSequence* SourceSequence = nullptr;
-
+        UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Settings")
+        TObjectPtr<UAnimSequence> SourceSequence;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Settings")
 	bool ReplaceExistingCurves = false;
 };
